@@ -1,0 +1,2 @@
+# SaleWeb
+本项目后端应用Django，前端三件卡应用Bootstrap和Echarts美化绘制图表，数据部署在Hadoop上，利用Hive进行分布式数据分析。数据为用faker制造的数据
