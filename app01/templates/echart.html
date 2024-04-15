@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <style>
+        .float_left {
+            float : left;
+        }
+    </style>
+</head>
+<body>
+<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+<div id="bar_chart1" style="width: 600px;height:400px;" class="float_left"></div>
+<div id="bar_chart2" style="width: 600px;height:400px;" class="float_left"></div>
+<div style="clear: both"></div>
+<li class="nav-item">
+          <a class="nav-link" href="/order/list">订单管理</a>
+        </li>
+<!-- 引入刚刚下载的 ECharts 文件 -->
+<script src="{% static "echarts.js" %} "></script>
+<script type="text/javascript">
+    
+        var chart_options = {{ chart_options|safe }};
+        var myChart = echarts.init(document.getElementById('bar_chart1'));
+        var myChart2 = echarts.init(document.getElementById('bar_chart2'));
+        myChart.setOption(chart_options);
+        myChart2.setOption(chart_options);
+
+    
+
+
+
+</script>
+<script src="{% static "bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js" %}"></script>
+<script src="{% static "jquery-3.6.4.min.js" %} "></script>
+<script src="{% static "bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"%}"></script>
+
+<script src="{% static "MDB5-STANDARD-UI-KIT-Free-6.2.0/js/mdb.min.js" %}"></script>
+{% endblock %}
+</body>
+</html>
