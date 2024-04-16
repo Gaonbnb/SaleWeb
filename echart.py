@@ -1,6 +1,7 @@
 from pyecharts.charts import Bar
 from pyecharts import options as opts
 
+
 # 准备数据
 x_data = ["shirt", "cardign", "chiffon shirt", "pants", "heels", "socks"]
 y_data = [5, 20, 36, 10, 75, 90]

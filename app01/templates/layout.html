@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>管理系统</title>
+    <title>汽车零部件信息管理系统</title>
     <link rel="stylesheet" href="{% static "bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "MDB5-STANDARD-UI-KIT-Free-6.2.0/css/mdb.min.css" %}">
 
@@ -19,7 +19,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">管理系统</a>
+    <a class="navbar-brand" href="#">汽车零部件信息管理系统</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,23 +32,27 @@
           <a class="nav-link" aria-current="page" href="/user/list">用户管理</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/depart/list">部门管理</a>
+          <a class="nav-link" href="/depart/list">公司管理</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="/numbers/list">号码管理</a>
+          <a class="nav-link" href="/numbers/list">部件管理</a>
         </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
           <a class="nav-link" href="/task/list">任务管理</a>
-        </li>
-
+        </li> -->
       <li class="nav-item">
           <a class="nav-link" href="/order/list">订单管理</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/echart">数据分析</a>
         </li>
-        <li class="nav-item dropdown">
+      </ul>
+        <ul class="navbar-nav navbar-right">
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled">敬请期待</a>
+            </li> -->
+            <li class="nav-item dropdown navbar-right">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {% if request.session.info.name %}
               {{ request.session.info.name }}
@@ -66,12 +70,8 @@
             <li><a class="dropdown-item" href="/myadmin/list">管理员账户</a></li>
           </ul>
         </li>
-      </ul>
-        <ul class="navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link disabled">敬请期待</a>
-            </li>
-        </ul>
+        </ul> 
+
 {#      <form class="d-flex" role="search">#}
 {#          <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search">#}
 {#          <button class="btn btn-outline-success " type="submit" style="width: 100px;"><strong>搜索</strong></button>#}
@@ -87,15 +87,15 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"> -->
     <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
+    <!-- <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span> -->
+    <!-- </div> -->
     <!-- Left -->
 
     <!-- Right -->
-    <div>
+    <!-- <div>
       <a href="" class="me-4 text-reset">
         <i class="fab fa-facebook-f"></i>
       </a>
@@ -114,10 +114,10 @@
       <a href="" class="me-4 text-reset">
         <i class="fa-brands fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
+  <!-- </section>
+  Section: Social media -->
 
   <!-- Section: Links  -->
   <section class="">
